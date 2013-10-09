@@ -45,18 +45,21 @@ var sentara = function(){
 		parallaxScroll : function(){
 			var scrolled = $(window).scrollTop(),
 				slideWhole = documentHeight + scrolled,
-				slide = Math.floor(scrolled / windowHeight);
+				slide = Math.floor(scrolled / windowHeight),
+				percent = scrolled / windowHeight % 1;
 
 			if(currentSlide != slide+1){
-				var slideObj = $(slides[slide]),
-					percent = scrolled / windowHeight % 1;
+				var slideObj = $(slides[slide]);
 				currentSlide = slide+1;
 				$('#nav ul li.active').removeClass('active');
 				$('li[attrSlideNumber='+(slide+1)+']').addClass('active');
 				$('.content.fixed').removeClass('fixed');
 				slideObj.find('.content').addClass('fixed');
 			}
-				
+			var content = $(slides[slide+1]).find('.content');
+			$(content).find('h1').css('margin-top', 500 - (500 * percent));
+			$(content).find('hr').css('margin-top', 200 - (200 * percent));
+			$(content).find('h3').css('margin-top', 400 - (400 * percent));
 		},
 		slideContentStagger : function(){
 

@@ -27,9 +27,10 @@
 		@include fullscreen;
 		position:relative;
 		padding:1em 14% 0;
+		top:17%;
 		&.fixed{
 			position:fixed;
-			top:0;
+			top:17%;
 		}
 		&.static{
 			position:fixed;
