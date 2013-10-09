@@ -1,0 +1,25 @@
+/*------------------------------------*\
+    $RESET
+\*------------------------------------*/
+* { 
+	-moz-box-sizing: border-box; 
+	-webkit-box-sizing: border-box; 
+	box-sizing: border-box; 
+}
+html, body, div, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, ol, ul, li, form, legend, label, table, header, footer, nav, section, figure { 
+	margin: 0; 
+	padding: 0; 
+} 
+table { 
+	border-collapse: collapse; 
+	border-spacing: 0; 
+}
+header, footer, nav, section, article, hgroup, figure {
+	display: block;	
+}
+
+/* Clearing floats without extra markup  */
+.wrapper { display: inline-block; }
+.wrapper:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+* html .wrapper { height: 1%; }
+.wrapper { display: block; }

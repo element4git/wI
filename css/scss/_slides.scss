@@ -1,0 +1,100 @@
+.slide{
+	@include fullscreen;
+	position:relative;
+	overflow:hidden;
+
+	&.is-center{
+		text-align: center;
+		& hr{
+			width:10em;
+			margin: 1em auto;
+			width: 46em;
+		}
+	}
+	&.A{
+		background: url(../img/background/a.gif) repeat;
+	}
+	&.B{
+		background: url(../img/background/b.gif) repeat;
+	}
+	&.C{
+		background: url(../img/background/c.gif) repeat;
+	}
+	&.D{
+		background: url(../img/background/d.gif) repeat;
+	}
+	& .content{
+		@include fullscreen;
+		position:relative;
+		padding:1em 14% 0;
+		&.fixed{
+			position:fixed;
+			top:0;
+		}
+		&.static{
+			position:fixed;
+		}
+	}
+	& .sideBar{
+		height: 100%;
+	    padding-top: 1em;
+	    position: absolute;
+	    right: 0;
+	    top: 0;
+	    width: 100%;
+	    background-attachment: fixed;
+	    background-position: 72% center;
+	    background-repeat: no-repeat;
+	}
+	& .centerBar{
+		@include fullscreen;
+	    position: absolute;
+	    right: 0;
+	    top: 0;
+	    background-attachment: fixed;
+	    background-position: center 10em;
+	    background-repeat: no-repeat;
+	}
+	& .next{
+		position:absolute;
+		bottom:0;
+		left:0;
+		width:100%;
+		& .box{
+			margin:0 auto;
+			width:60px;
+			height:60px;
+			position:relative;
+			cursor:pointer;
+		}
+		& button{
+			border:none;
+			@include fullscreen;
+			background-color:#fff;
+			border-radius:5px 5px 0 0;
+			opacity:0.1;
+			cursor:pointer;
+		}
+		& .caret{
+			background-image: url("../img/background/downCaret.png");
+		    bottom: 18px;
+		    height: 19px;
+		    left: 13px;
+		    margin: 0 auto;
+		    position: absolute;
+		    width: 36px;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
