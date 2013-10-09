@@ -46,7 +46,7 @@ var sentara = function(){
 			var scrolled = $(window).scrollTop(),
 				slideWhole = documentHeight + scrolled,
 				slide = Math.floor(scrolled / windowHeight),
-				percent = scrolled / windowHeight % 1;
+				percent = Math.ceil((scrolled / windowHeight % 1) *100) / 100;
 
 			if(currentSlide != slide+1){
 				var slideObj = $(slides[slide]);
@@ -56,10 +56,17 @@ var sentara = function(){
 				$('.content.fixed').removeClass('fixed');
 				slideObj.find('.content').addClass('fixed');
 			}
-			var content = $(slides[slide+1]).find('.content');
-			$(content).find('h1').css('margin-top', 500 - (500 * percent));
-			$(content).find('hr').css('margin-top', 200 - (200 * percent));
-			$(content).find('h3').css('margin-top', 400 - (400 * percent));
+
+			
+			if(percent < .93){
+				var content = $(slides[slide+1]).find('.content');
+				$(content).find('h1').css('margin-top', 500 - (500 * percent));
+				$(content).find('hr').css('margin-top', 200 - (200 * percent));
+				$(content).find('h3').css('margin-top', 400 - (400 * percent));
+			}else{
+				var content = $(slides[slide+1]).find('.content');
+				$(content).find('h1, hr, h3').removeAttr('style');
+			}
 		},
 		slideContentStagger : function(){
 
@@ -71,7 +78,7 @@ var sentara = function(){
 		scrollTo : function(slide){
 			htmlbody.animate({
 				scrollTop: (windowHeight*slide) - windowHeight
-			}, 1000, 'easeInOutExpo', function() { //era 600 easeOutQuint
+			}, 1600, 'easeInOutExpo', function() { //era 600 easeOutQuint
 				console.log(currentSlide);
 			});
 		},
