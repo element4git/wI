@@ -30,11 +30,13 @@
 		top:20%;
 		&.fixed{
 			position:fixed;
-			top:20%;
 		}
 		&.static{
 			position:fixed;
 		}
+	}
+	&.is-wide .content{
+		top:8%;
 	}
 	& .sideBar{
 		height: 100%;
