@@ -50,12 +50,10 @@ var sentara = function(){
 				percent = Math.ceil((scrolled / windowHeight % 1) *100) / 100;
 
 
-			console.log(direction);
 			if(currentSlide != slide+1){
 				var slideObj = $(slides[slide]);
 				currentSlide = slide+1;
 
-				console.log(currentSlide);
 				$('#nav ul li.active').removeClass('active');
 				$('li[attrSlideNumber='+(slide+1)+']').addClass('active');
 				$('.content.fixed').removeClass('fixed');
@@ -107,7 +105,7 @@ var sentara = function(){
 }();
 
 
-/*						       *\
+/*                             *\
    event handlers for > mobile
 \*                             */
 if($(window).width() > 768){
