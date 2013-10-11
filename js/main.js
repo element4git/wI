@@ -5,7 +5,7 @@ var sentara = function(){
 		slides,
 		currentSlide = 1,
 		htmlbody,
-		hoverTimeOut;
+		hoverActive = false;
 	$(function(){
 		slides = $('.slide');
 		documentHeight = $(document).height();
@@ -24,17 +24,18 @@ var sentara = function(){
 		$('#nav ul li').bind('click',function(){
 			var slideNum = $(this).attr('attrSlideNumber');
 			sentara.scrollTo(slideNum);
+			hoverActive = true;
 		}).bind('mouseover',function(){
-			$('#nav ul li.active').removeClass('active');
-			$(this).addClass('active');
-			clearTimeout(hoverTimeOut);
+			if($(this).hasClass('active')){
+				hoverActive = true;
+			}else{
+				$(this).addClass('active');
+			}
 		}).bind('mouseout',function(){
-			hoverTimeOut = setTimeout(
-				function(){
-					$('#nav ul li.active').removeClass('active');
-					$('li[attrSlideNumber='+(currentSlide)+']').addClass('active');
-				},500
-			);
+			if(!hoverActive){
+				$(this).removeClass('active');
+			}
+			hoverActive = false;
 		});
 
 		$('.next button, .next .caret').bind('click',function(){
