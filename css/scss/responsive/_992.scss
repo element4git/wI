@@ -21,10 +21,129 @@
 
 
 .slide{
+	@include fullscreen;
+
 	& .content{
-		top:8%;
+		@include fullscreen;
+		top:20%;
+		&.fixed{
+			position:fixed;
+		}
+		&.static{
+			position:fixed;
+		}
+	}
+	& .content{
+		padding:0 14%;
+	}
+	&.is-center{
+		text-align: center;
+		& hr{
+			width:10em;
+			margin: 1em auto;
+			width: 46em;
+		}
 	}
 	&.is-wide .content{
-		top:1%;
+		top:8%;
+	}
+	& .sideBar{
+		height: 100%;
+	    padding-top: 1em;
+	    position: absolute;
+	    right: 0;
+	    top: 0;
+	    width: 100%;
+	    background-attachment: fixed;
+	    background-position: 90% center;
+	    background-repeat: no-repeat;
+	    display: block;
+	}
+	& .centerBar{
+		display:inline;
+		width:100%;
+	}
+	& .next{
+		position:absolute;
+		bottom:0;
+		left:0;
+		width:100%;
+		display: block;
+		& .box{
+			margin:0 auto;
+			width:60px;
+			height:60px;
+			position:relative;
+			cursor:pointer;
+		}
+		& button{
+			border:none;
+			@include fullscreen;
+			background-color:#fff;
+			border-radius:5px 5px 0 0;
+			opacity:0.1;
+			cursor:pointer;
+		}
+		& .caret{
+			background-image: url("../img/background/downCaret.png");
+		    bottom: 18px;
+		    height: 19px;
+		    left: 13px;
+		    margin: 0 auto;
+		    position: absolute;
+		    width: 36px;
+		}
 	}
 }
+
+#nav{ 
+	position:fixed; 
+	right:20px; 
+	top:20px;
+	z-index:10;
+	padding:11px;
+    cursor: pointer;
+    display: block;
+}
+#nav .navbg{
+	@include fullscreen;
+	position:absolute;
+	top:0;
+	left:0;
+	background-color:#fff;
+	opacity:0.1;
+	z-index:1;
+	border-radius:6px;
+}
+#nav ul li{
+	margin:0;
+	position:relative;
+	z-index:10;
+} 
+#nav ul li:before{
+	border-radius: 5px 5px 5px 5px;
+    color: #FFFFFF;
+    content: "";
+    display: block;
+    font-size: 0;
+    width: 0;
+    height: 0;
+    margin-bottom: 4px;
+    padding: 5px;
+    border:solid 1px #FFFFFF;
+	opacity:0.6;
+}
+#nav ul li.active:before{
+	opacity:1;
+	background-color:#Fff;
+}
+
+#mainContent, #content{@include fullscreen;}
+
+.column{width:40%; min-width:520px;}
+.smallScreen{
+	display:none;
+}
+
+ul{font-size:1em;}
+p{font-size:1em;}

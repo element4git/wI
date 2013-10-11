@@ -18,3 +18,73 @@
 // 7. VENDOR-SPECIFIC 		==============================
 // 8. MODERNIZR 			==============================
 // 9. TEMPLATE SPECIFICS 	==============================
+
+.slide{
+	position:relative;
+	overflow:hidden;
+
+	&.A{
+		background: url(../img/background/a.gif) repeat;
+	}
+	&.B{
+		background: url(../img/background/b.gif) repeat;
+	}
+	&.C{
+		background: url(../img/background/c.gif) repeat;
+	}
+	&.D{
+		background: url(../img/background/d.gif) repeat;
+	}
+	& .content{
+		position:relative;
+		padding:10em 14% 0;
+		top:8%;
+		&.fixed{
+			position:relative;
+		}
+		&.static{
+			position:relative;
+			text-align: center;
+			padding-bottom:10em;
+		}
+	}
+	&.is-wide .content{
+		top:1%;
+		padding-bottom:10em;
+	}
+	& .sideBar{
+	    display: none;
+	}
+	& .centerBar{
+		display:none;
+	}
+	& .next{
+		display:none;
+	}
+}
+
+#nav{ 
+    display: none;
+}
+#content{position:absolute;}
+.logo{position:absolute; top:14px; left:14px;}
+.quaternary {color:$quaternary;}
+.smallScreen{
+	text-align:center;
+	& img{
+		width:72%;
+	}
+}
+
+ul{font-size:1.5em;}
+p{font-size:1.5em;}
+
+
+
+
+
+
+
+
+
+

@@ -24,14 +24,21 @@ max-width : 1440px; }
 // 9. TEMPLATE SPECIFICS 	==============================
 
 .slide{
-	& .content{
-		position:relative;
-		top:20%;
+	& .sideBar{
+	    background-position: 72% center;
 	}
-	&.is-wide .content{
-		top:8%;
+
+	& .centerBar{
+		display:inline;
+		width:auto;
 	}
 }
+
+
+
+
+
+
 
 
 
