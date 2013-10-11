@@ -1,0 +1,43 @@
+/* ============================================================
+
+320 and Up by Andy Clarke
+Version: 3.0
+URL: http://stuffandnonsense.co.uk/projects/320andup/
+Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
+
+============================================================ */
+
+// 480px
+@media only screen and (min-width: 480px) {
+@import "responsive/480";
+}
+
+// 600px
+@media only screen and (min-width: 600px) {
+@import "responsive/600";
+}
+
+// 768px
+@media only screen and (min-width: 768px) {
+@import "responsive/768";
+}
+
+// 992px
+@media only screen and (min-width: 992px) {
+@import "responsive/992";
+}
+
+// 1382
+@media only screen and (min-width: 1382px) {
+@import "responsive/1382";
+}
+
+// 2x
+@media
+only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {
+@import "responsive/2x"; }
+
+// Layout option using display:table for navigation positioning
+// @import "responsive/upstarts/320andup-display-table/upstart";
