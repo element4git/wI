@@ -19,3 +19,18 @@
 // 8. MODERNIZR 			==============================
 // 9. TEMPLATE SPECIFICS 	==============================
 
+
+
+#slideBox{
+	max-width:830px;
+}
+#slideNavigation .nextCaret, 
+#slideNavigation .previousCaret{
+	display:inline;
+}
+
+#mapKey{
+	position:absolute; 
+	left:4%; 
+	top:23%; 
+}

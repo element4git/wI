@@ -47,6 +47,9 @@
 	&.is-wide .content{
 		top:8%;
 	}
+	&.is-wide .content.map{
+		top:1%;
+	}
 	& .sideBar{
 		height: 100%;
 	    padding-top: 1em;
@@ -96,6 +99,14 @@
 	}
 }
 
+.slidesjs-pagination li:before{
+	margin: 0 34%;
+}
+
+#mapKey{
+	left:4%; 
+}
+
 #nav{ 
 	position:fixed; 
 	right:20px; 
@@ -134,6 +145,10 @@
 	opacity:0.6;
 }
 #nav ul li.active:before{
+	opacity:1;
+	background-color:#Fff;
+}
+#nav ul li:hover:before{
 	opacity:1;
 	background-color:#Fff;
 }

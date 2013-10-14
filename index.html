@@ -46,7 +46,7 @@
           <div class="smallScreen">
             <img src="img/sidebar_slide2.png" />
           </div>
-          <div class="sideBar" style="background-image: url(img/sidebar_slide2.png);"></div>
+          <div class="sideBar lazy" data-original="img/sidebar_slide2.png"></div>
           <div class="next"><div class="box"><button></button><div class="caret"></div></div></div>
         </div>
 
@@ -62,7 +62,7 @@
           <div class="smallScreen">
             <img src="img/sidebar_slide3.png" />
           </div>
-          <div class="sideBar" style="background-image: url(img/sidebar_slide3.png);"></div>
+          <div class="sideBar lazy" data-original="img/sidebar_slide3.png"></div>
           <div class="next"><div class="box"><button></button><div class="caret"></div></div></div>
         </div>
 
@@ -78,7 +78,7 @@
           <div class="smallScreen">
             <img src="img/sidebar_slide2.png" />
           </div>
-          <div class="sideBar" style="background-image: url(img/sidebar_slide2.png);"></div>
+          <div class="sideBar lazy" data-original="img/sidebar_slide2.png"></div>
           <div class="next"><div class="box"><button></button><div class="caret"></div></div></div>
         </div>
 
@@ -87,7 +87,11 @@
             <h1>Obesity Defined</h1>
             <hr />
             <h2>BMI = wt.(kg)/ht.(m2)</h2>
-            <img class="centerBar" src="img/slide5.png" />
+            <img class="centerBar lazy" data-original="img/slide5.png" />
+          </div>
+
+          <div class="smallScreen">
+            <img src="img/slide5.png" />
           </div>
           <div class="next"><div class="box"><button></button><div class="caret"></div></div></div>
         </div>
@@ -99,7 +103,7 @@
               <hr />
               <h3><strong>55%</strong> American adults are overweight.</h3>
               <h3><strong>25%</strong> of American children are overweight.</h3>
-              <ul>
+              <ul class="list">
                 <li>Obesity is a major public health problem worldwide  affecting <strong>25% of industrialized world.</strong> </li>
                 <li>Obesity alone costs America 6% of health care expenditures - <strong>$238 billion / year.</strong> </li>
                 <li>Approximately $30 billion is spent annually in the pursuit of weight loss. </li>
@@ -110,7 +114,7 @@
           <div class="smallScreen">
             <img src="img/sidebar_slide2.png" />
           </div>
-          <div class="sideBar" style="background-image: url(img/sidebar_slide2.png);"></div>
+          <div class="sideBar lazy" data-original="img/sidebar_slide2.png"></div>
           <div class="next"><div class="box"><button></button><div class="caret"></div></div></div>
         </div>
 
@@ -121,16 +125,75 @@
             </div>
           </div>
           <div class="smallScreen">
-            <img src="img/sidebar_slide3.png" />
+            <img class="lazy" data-original="img/sidebar_slide3.png" />
           </div>
-          <div class="sideBar" style="background-image: url(img/sidebar_slide3.png);"></div>
+          <div class="sideBar lazy" data-original="img/sidebar_slide3.png"></div>
+          <div class="next"><div class="box"><button></button><div class="caret"></div></div></div>
+        </div>
+
+        <div class="slide is-center is-wide D">
+          <div class="content map">
+            <h1>Obesity Trends</h1>
+            <hr />
+            <h3>By 1994, no state had an obesity rate of less than 10%.</h3>
+            <div id="mapKey"><img src="img/mapKey.png" /></div>
+            <div id="slideBox">
+              <div id="slides">
+                <!-- image 1 -->
+                <img src="img/map_slides/map_1985.png" alt="" class="default" />
+                <!-- image 2 -->
+                <img src="img/map_slides/map_1987.png" alt="" />
+                <!-- image xx -->
+                <img src="img/map_slides/map_1989.png" alt="" />
+                <img src="img/map_slides/map_1991.png" alt="" />
+                <img src="img/map_slides/map_1993.png" alt="" />
+                <img src="img/map_slides/map_1994.png" alt="" />
+                <img src="img/map_slides/map_1995.png" alt="" />
+                <img src="img/map_slides/map_1996.png" alt="" />
+                <img src="img/map_slides/map_1997.png" alt="" />
+                <img src="img/map_slides/map_1999.png" alt="" />
+                <img src="img/map_slides/map_2000.png" alt="" />
+                <img src="img/map_slides/map_2001.png" alt="" />
+                <img src="img/map_slides/map_2002.png" alt="" />
+                <img src="img/map_slides/map_2003.png" alt="" />
+                <img src="img/map_slides/map_2004.png" alt="" />
+                <img src="img/map_slides/map_2005.png" alt="" />
+                <img src="img/map_slides/map_2007.png" alt="" />
+                <img src="img/map_slides/map_2009.png" alt="" />
+                <img src="img/map_slides/map_2010.png" alt="" />
+              </div>
+              <div id="subHeadContainer">
+                <h3>In 1985, only 8 states had an obesity rate of 10-14%.</h3>
+                <h3>This increased significantly in 1987.</h3>
+                <h3>It increased again 2 years later in 1989.</h3>
+                <h3>By 1991 we had a new level of obesity, now at 15-19% in some states.</h3>
+                <h3>This increased in 1993.</h3>
+                <h3>By 1994, no state had an obesity rate of less than 10%.</h3>
+                <h3>1995</h3>
+                <h3>1996</h3>
+                <h3>We reached a new high in 1997, with 3 states now at 20-24% obesity.</h3>
+                <h3>By1999, half of the country had caught up with the new high obesity rate.</h3>
+                <h3>In 2000, Colorado was the last state to have an obesity rate below 15%.</h3>
+                <h3>Mississippi became the first state to reach an obesity rate of 25-29% in 2001.</h3>
+                <h3>In 2002 no state had an obesity rate below 15% anymore.</h3>
+                <h3>2003</h3>
+                <h3>2004</h3>
+                <h3>Again, a new all time high obesity rate of greater than 30% was first seen in 2005.</h3>
+                <h3>2007</h3>
+                <h3>Again, Colorado was the thinnest state in 2009.</h3>
+                <h3>But Colorado lost the battle in 2010.</h3>
+              </div>
+              <div id="slideNavigation"><span class="slideNavBg"></span><div class="previousCaret"></div><div class="pagination"></div><div class="nextCaret"></div></div>
+            </div>
+          </div>
           <div class="next"><div class="box"><button></button><div class="caret"></div></div></div>
         </div>
 
       </div>  
     </div>
-  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.js"></script>
+  <script type="text/javascript" src="js/jquery.js"></script>
   <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+  <script type="text/javascript" src="js/slide.js"></script>  
   <script type="text/javascript" src="js/main.js"></script>  
   </body>
 

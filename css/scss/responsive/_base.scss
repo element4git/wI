@@ -48,9 +48,12 @@
 			padding-bottom:10em;
 		}
 	}
+	& .content.map{
+		padding:0 8%;
+		& h3{margin-bottom:1em;}
+	}
 	&.is-wide .content{
 		top:1%;
-		padding-bottom:10em;
 	}
 	& .sideBar{
 	    display: none;
@@ -80,6 +83,126 @@ ul{font-size:1.5em;}
 p{font-size:1.5em;}
 
 
+
+#mapKey{
+	position:absolute; 
+	left:4%; 
+	top:36%; 
+	display:block;
+	& img{
+		width:90%
+	}
+}
+#slides {
+  display: none
+}
+
+#slideBox{
+	max-width:430px;
+	margin:0 auto;
+	width:100%;
+	height:100%;
+}
+
+#slides .slidesjs-navigation {
+  margin-top:3px;
+}
+
+#slides .slidesjs-previous {
+  margin-right: 5px;
+  float: left;
+}
+
+#slides .slidesjs-next {
+  margin-right: 5px;
+  float: left;
+}
+
+.slidesjs-pagination {
+  margin: 6px 0 0;
+  float: right;
+  list-style: none;
+}
+
+.slidesjs-pagination li {
+  float: left;
+  margin: 0 1px;
+  cursor: pointer;
+}
+.slidesjs-pagination li:before{
+	border-radius: 5px 5px 5px 5px;
+    color: #FFFFFF;
+    content: "";
+    display: block;
+    font-size: 0;
+    width: 0;
+    height: 0;
+    padding: 5px;
+    border:solid 1px #FFFFFF;
+	opacity:0.6;
+	margin: 0 29%;
+}
+#subHeadContainer{display:none;}
+.slidesjs-pagination li.active:before,
+.slidesjs-pagination li:hover:before{
+	opacity:1;
+	background-color:#Fff;
+}
+
+.slidesjs-pagination li a.active,
+.slidesjs-pagination li a:hover.active {
+  background-position: 0 -13px
+}
+
+.slidesjs-pagination li a:hover {
+  background-position: 0 -26px
+}
+
+#slides a:link,
+#slides a:visited {
+  color: #333
+}
+
+#slides a:hover,
+#slides a:active {
+  color: #9e2020
+}
+
+.navbar {
+  overflow: hidden
+}
+#slideNavigation{
+	position: relative;
+	display:block;
+	text-align:center;
+	padding:5px;
+}
+#slideNavigation > div{
+	display:inline-block;
+	position:relative;
+	z-index: 10;
+	& a{
+		color:#FFF;
+		text-decoration: none;
+	}
+}
+
+#slideNavigation .nextCaret, 
+#slideNavigation .previousCaret{
+	display:none;
+}
+
+.slideNavBg{
+	@include fullscreen;
+	position:absolute;
+	top:0;
+	left:0;
+	background-color:#fff;
+	opacity:0.1;
+	z-index:1;
+	border-radius:6px;
+	display:block;
+}
 
 
 

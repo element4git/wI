@@ -1,1 +1,557 @@
-*{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}html,body,div,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,ol,ul,li,form,legend,label,table,header,footer,nav,section,figure{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}header,footer,nav,section,article,hgroup,figure{display:block}.wrapper{display:inline-block}.wrapper:after{content:".";display:block;height:0;clear:both;visibility:hidden}* html .wrapper{height:1%}.wrapper{display:block}.slide{position:relative;overflow:hidden}.slide.A{background:url(../img/background/a.gif) repeat}.slide.B{background:url(../img/background/b.gif) repeat}.slide.C{background:url(../img/background/c.gif) repeat}.slide.D{background:url(../img/background/d.gif) repeat}.slide .content{position:relative;padding:10em 14% 0;top:8%}.slide .content.fixed{position:relative}.slide .content.static{position:relative;text-align:center;padding-bottom:10em}.slide.is-wide .content{top:1%;padding-bottom:10em}.slide .sideBar{display:none}.slide .centerBar{display:none}.slide .next{display:none}#nav{display:none}#content{position:absolute}.logo{position:absolute;top:14px;left:14px}.quaternary{color:#2e1d45}.smallScreen{text-align:center}.smallScreen img{width:72%}ul{font-size:1.5em}p{font-size:1.5em}@media only screen and (min-width: 992px){.slide{width:100%;height:100%}.slide .content{width:100%;height:100%;top:20%}.slide .content.fixed{position:fixed}.slide .content.static{position:fixed}.slide .content{padding:0 14%}.slide.is-center{text-align:center}.slide.is-center hr{width:10em;margin:1em auto;width:46em}.slide.is-wide .content{top:8%}.slide .sideBar{height:100%;padding-top:1em;position:absolute;right:0;top:0;width:100%;background-attachment:fixed;background-position:90% center;background-repeat:no-repeat;display:block}.slide .centerBar{display:inline;width:100%}.slide .next{position:absolute;bottom:0;left:0;width:100%;display:block}.slide .next .box{margin:0 auto;width:60px;height:60px;position:relative;cursor:pointer}.slide .next button{border:none;width:100%;height:100%;background-color:#fff;border-radius:5px 5px 0 0;opacity:0.1;cursor:pointer}.slide .next .caret{background-image:url("../img/background/downCaret.png");bottom:18px;height:19px;left:13px;margin:0 auto;position:absolute;width:36px}#nav{position:fixed;right:20px;top:20px;z-index:10;padding:11px;cursor:pointer;display:block}#nav .navbg{width:100%;height:100%;position:absolute;top:0;left:0;background-color:#fff;opacity:0.1;z-index:1;border-radius:6px}#nav ul li{margin:0;position:relative;z-index:10}#nav ul li:before{border-radius:5px 5px 5px 5px;color:#FFFFFF;content:"";display:block;font-size:0;width:0;height:0;margin-bottom:4px;padding:5px;border:solid 1px #FFFFFF;opacity:0.6}#nav ul li.active:before{opacity:1;background-color:#Fff}#mainContent,#content{width:100%;height:100%}.column{width:40%;min-width:520px}.smallScreen{display:none}ul{font-size:1em}p{font-size:1em}}@media only screen and (min-width: 1382px){body{max-width:1440px}.slide .sideBar{background-position:72% center}.slide .centerBar{display:inline;width:auto}}
+/* ============================================================
+
+320 and Up by Andy Clarke
+Version: 3.0
+URL: http://stuffandnonsense.co.uk/projects/320andup/
+Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
+
+============================================================ */
+/*------------------------------------*\
+    $RESET
+\*------------------------------------*/
+/* line 4, scss/imports/_reset.scss */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 9, scss/imports/_reset.scss */
+html, body, div, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, ol, ul, li, form, legend, label, table, header, footer, nav, section, figure {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 13, scss/imports/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 17, scss/imports/_reset.scss */
+header, footer, nav, section, article, hgroup, figure {
+  display: block;
+}
+
+/* Clearing floats without extra markup  */
+/* line 22, scss/imports/_reset.scss */
+.wrapper {
+  display: inline-block;
+}
+
+/* line 23, scss/imports/_reset.scss */
+.wrapper:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/* line 24, scss/imports/_reset.scss */
+* html .wrapper {
+  height: 1%;
+}
+
+/* line 25, scss/imports/_reset.scss */
+.wrapper {
+  display: block;
+}
+
+/* Typography */
+/* 480 =================================================== */
+/* line 22, scss/responsive/_base.scss */
+.slide {
+  position: relative;
+  overflow: hidden;
+}
+/* line 26, scss/responsive/_base.scss */
+.slide.A {
+  background: url(../img/background/a.gif) repeat;
+}
+/* line 29, scss/responsive/_base.scss */
+.slide.B {
+  background: url(../img/background/b.gif) repeat;
+}
+/* line 32, scss/responsive/_base.scss */
+.slide.C {
+  background: url(../img/background/c.gif) repeat;
+}
+/* line 35, scss/responsive/_base.scss */
+.slide.D {
+  background: url(../img/background/d.gif) repeat;
+}
+/* line 38, scss/responsive/_base.scss */
+.slide .content {
+  position: relative;
+  padding: 10em 14% 0;
+  top: 8%;
+}
+/* line 42, scss/responsive/_base.scss */
+.slide .content.fixed {
+  position: relative;
+}
+/* line 45, scss/responsive/_base.scss */
+.slide .content.static {
+  position: relative;
+  text-align: center;
+  padding-bottom: 10em;
+}
+/* line 51, scss/responsive/_base.scss */
+.slide .content.map {
+  padding: 0 8%;
+}
+/* line 53, scss/responsive/_base.scss */
+.slide .content.map h3 {
+  margin-bottom: 1em;
+}
+/* line 55, scss/responsive/_base.scss */
+.slide.is-wide .content {
+  top: 1%;
+}
+/* line 58, scss/responsive/_base.scss */
+.slide .sideBar {
+  display: none;
+}
+/* line 61, scss/responsive/_base.scss */
+.slide .centerBar {
+  display: none;
+}
+/* line 64, scss/responsive/_base.scss */
+.slide .next {
+  display: none;
+}
+
+/* line 69, scss/responsive/_base.scss */
+#nav {
+  display: none;
+}
+
+/* line 72, scss/responsive/_base.scss */
+#content {
+  position: absolute;
+}
+
+/* line 73, scss/responsive/_base.scss */
+.logo {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+}
+
+/* line 74, scss/responsive/_base.scss */
+.quaternary {
+  color: #2e1d45;
+}
+
+/* line 75, scss/responsive/_base.scss */
+.smallScreen {
+  text-align: center;
+}
+/* line 77, scss/responsive/_base.scss */
+.smallScreen img {
+  width: 72%;
+}
+
+/* line 82, scss/responsive/_base.scss */
+ul {
+  font-size: 1.5em;
+}
+
+/* line 83, scss/responsive/_base.scss */
+p {
+  font-size: 1.5em;
+}
+
+/* line 87, scss/responsive/_base.scss */
+#mapKey {
+  position: absolute;
+  left: 4%;
+  top: 36%;
+  display: block;
+}
+/* line 92, scss/responsive/_base.scss */
+#mapKey img {
+  width: 90%;
+}
+
+/* line 96, scss/responsive/_base.scss */
+#slides {
+  display: none;
+}
+
+/* line 100, scss/responsive/_base.scss */
+#slideBox {
+  max-width: 430px;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 107, scss/responsive/_base.scss */
+#slides .slidesjs-navigation {
+  margin-top: 3px;
+}
+
+/* line 111, scss/responsive/_base.scss */
+#slides .slidesjs-previous {
+  margin-right: 5px;
+  float: left;
+}
+
+/* line 116, scss/responsive/_base.scss */
+#slides .slidesjs-next {
+  margin-right: 5px;
+  float: left;
+}
+
+/* line 121, scss/responsive/_base.scss */
+.slidesjs-pagination {
+  margin: 6px 0 0;
+  float: right;
+  list-style: none;
+}
+
+/* line 127, scss/responsive/_base.scss */
+.slidesjs-pagination li {
+  float: left;
+  margin: 0 1px;
+  cursor: pointer;
+}
+
+/* line 132, scss/responsive/_base.scss */
+.slidesjs-pagination li:before {
+  border-radius: 5px 5px 5px 5px;
+  color: #FFFFFF;
+  content: "";
+  display: block;
+  font-size: 0;
+  width: 0;
+  height: 0;
+  padding: 5px;
+  border: solid 1px #FFFFFF;
+  opacity: 0.6;
+  margin: 0 29%;
+}
+
+/* line 145, scss/responsive/_base.scss */
+#subHeadContainer {
+  display: none;
+}
+
+/* line 147, scss/responsive/_base.scss */
+.slidesjs-pagination li.active:before,
+.slidesjs-pagination li:hover:before {
+  opacity: 1;
+  background-color: #Fff;
+}
+
+/* line 153, scss/responsive/_base.scss */
+.slidesjs-pagination li a.active,
+.slidesjs-pagination li a:hover.active {
+  background-position: 0 -13px;
+}
+
+/* line 157, scss/responsive/_base.scss */
+.slidesjs-pagination li a:hover {
+  background-position: 0 -26px;
+}
+
+/* line 162, scss/responsive/_base.scss */
+#slides a:link,
+#slides a:visited {
+  color: #333333;
+}
+
+/* line 167, scss/responsive/_base.scss */
+#slides a:hover,
+#slides a:active {
+  color: #9e2020;
+}
+
+/* line 171, scss/responsive/_base.scss */
+.navbar {
+  overflow: hidden;
+}
+
+/* line 174, scss/responsive/_base.scss */
+#slideNavigation {
+  position: relative;
+  display: block;
+  text-align: center;
+  padding: 5px;
+}
+
+/* line 180, scss/responsive/_base.scss */
+#slideNavigation > div {
+  display: inline-block;
+  position: relative;
+  z-index: 10;
+}
+/* line 184, scss/responsive/_base.scss */
+#slideNavigation > div a {
+  color: #FFF;
+  text-decoration: none;
+}
+
+/* line 191, scss/responsive/_base.scss */
+#slideNavigation .nextCaret,
+#slideNavigation .previousCaret {
+  display: none;
+}
+
+/* line 195, scss/responsive/_base.scss */
+.slideNavBg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  opacity: 0.1;
+  z-index: 1;
+  border-radius: 6px;
+  display: block;
+}
+
+@media only screen and (min-width: 600px) {
+  /* 600 =================================================== */
+}
+@media only screen and (min-width: 768px) {
+  /* 768 =================================================== */
+  /* line 24, scss/responsive/_768.scss */
+  #slideBox {
+    max-width: 830px;
+  }
+
+  /* line 28, scss/responsive/_768.scss */
+  #slideNavigation .nextCaret,
+  #slideNavigation .previousCaret {
+    display: inline;
+  }
+
+  /* line 32, scss/responsive/_768.scss */
+  #mapKey {
+    position: absolute;
+    left: 4%;
+    top: 23%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  /* 992 =================================================== */
+  /* line 23, scss/responsive/_992.scss */
+  .slide {
+    width: 100%;
+    height: 100%;
+  }
+  /* line 26, scss/responsive/_992.scss */
+  .slide .content {
+    width: 100%;
+    height: 100%;
+    top: 20%;
+  }
+  /* line 29, scss/responsive/_992.scss */
+  .slide .content.fixed {
+    position: fixed;
+  }
+  /* line 32, scss/responsive/_992.scss */
+  .slide .content.static {
+    position: fixed;
+  }
+  /* line 36, scss/responsive/_992.scss */
+  .slide .content {
+    padding: 0 14%;
+  }
+  /* line 39, scss/responsive/_992.scss */
+  .slide.is-center {
+    text-align: center;
+  }
+  /* line 41, scss/responsive/_992.scss */
+  .slide.is-center hr {
+    width: 10em;
+    margin: 1em auto;
+    width: 46em;
+  }
+  /* line 47, scss/responsive/_992.scss */
+  .slide.is-wide .content {
+    top: 8%;
+  }
+  /* line 50, scss/responsive/_992.scss */
+  .slide.is-wide .content.map {
+    top: 1%;
+  }
+  /* line 53, scss/responsive/_992.scss */
+  .slide .sideBar {
+    height: 100%;
+    padding-top: 1em;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: 90% center;
+    background-repeat: no-repeat;
+    display: block;
+  }
+  /* line 65, scss/responsive/_992.scss */
+  .slide .centerBar {
+    display: inline;
+    width: 100%;
+  }
+  /* line 69, scss/responsive/_992.scss */
+  .slide .next {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: block;
+  }
+  /* line 75, scss/responsive/_992.scss */
+  .slide .next .box {
+    margin: 0 auto;
+    width: 60px;
+    height: 60px;
+    position: relative;
+    cursor: pointer;
+  }
+  /* line 82, scss/responsive/_992.scss */
+  .slide .next button {
+    border: none;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 5px 5px 0 0;
+    opacity: 0.1;
+    cursor: pointer;
+  }
+  /* line 90, scss/responsive/_992.scss */
+  .slide .next .caret {
+    background-image: url("../img/background/downCaret.png");
+    bottom: 18px;
+    height: 19px;
+    left: 13px;
+    margin: 0 auto;
+    position: absolute;
+    width: 36px;
+  }
+
+  /* line 102, scss/responsive/_992.scss */
+  .slidesjs-pagination li:before {
+    margin: 0 34%;
+  }
+
+  /* line 106, scss/responsive/_992.scss */
+  #mapKey {
+    left: 4%;
+  }
+
+  /* line 110, scss/responsive/_992.scss */
+  #nav {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    z-index: 10;
+    padding: 11px;
+    cursor: pointer;
+    display: block;
+  }
+
+  /* line 119, scss/responsive/_992.scss */
+  #nav .navbg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    opacity: 0.1;
+    z-index: 1;
+    border-radius: 6px;
+  }
+
+  /* line 129, scss/responsive/_992.scss */
+  #nav ul li {
+    margin: 0;
+    position: relative;
+    z-index: 10;
+  }
+
+  /* line 134, scss/responsive/_992.scss */
+  #nav ul li:before {
+    border-radius: 5px 5px 5px 5px;
+    color: #FFFFFF;
+    content: "";
+    display: block;
+    font-size: 0;
+    width: 0;
+    height: 0;
+    margin-bottom: 4px;
+    padding: 5px;
+    border: solid 1px #FFFFFF;
+    opacity: 0.6;
+  }
+
+  /* line 147, scss/responsive/_992.scss */
+  #nav ul li.active:before {
+    opacity: 1;
+    background-color: #Fff;
+  }
+
+  /* line 151, scss/responsive/_992.scss */
+  #nav ul li:hover:before {
+    opacity: 1;
+    background-color: #Fff;
+  }
+
+  /* line 156, scss/responsive/_992.scss */
+  #mainContent, #content {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* line 158, scss/responsive/_992.scss */
+  .column {
+    width: 40%;
+    min-width: 520px;
+  }
+
+  /* line 159, scss/responsive/_992.scss */
+  .smallScreen {
+    display: none;
+  }
+
+  /* line 163, scss/responsive/_992.scss */
+  ul {
+    font-size: 1em;
+  }
+
+  /* line 164, scss/responsive/_992.scss */
+  p {
+    font-size: 1em;
+  }
+}
+@media only screen and (min-width: 1382px) {
+  /* 1382 =================================================== */
+  /* line 14, scss/responsive/_1382.scss */
+  body {
+    max-width: 1440px;
+  }
+
+  /* line 27, scss/responsive/_1382.scss */
+  .slide .sideBar {
+    background-position: 72% center;
+  }
+  /* line 31, scss/responsive/_1382.scss */
+  .slide .centerBar {
+    display: inline;
+    width: auto;
+  }
+
+  /* line 39, scss/responsive/_1382.scss */
+  #mapKey {
+    left: 10%;
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  /* 2x =================================================== */
+}

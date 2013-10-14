@@ -43,7 +43,7 @@ ul li {
 	list-style:none; /* if you’re not already using a reset */
 	margin-left:0.9em;
 }
-ul li:before {
+ul.list li:before {
   color:#fff; /* set color to red */
   margin-left:-0.7em;
   content:"\2022"; /* /2022 is the numerical unicode for &bull; */
@@ -52,5 +52,3 @@ ul li:before {
   position:relative;
     top:.1em; /* set the vertical position of the bullet if necessary. Make sure to use em or % */
 }
-
-

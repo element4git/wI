@@ -4,9 +4,34 @@ var sentara = function(){
 		documentHeight,
 		slides,
 		currentSlide = 1,
-		htmlbody,
-		hoverActive = false;
-	$(function(){
+		htmlbody;
+	$(function(){ //######### INIT #######################
+
+		/*                               *\
+			event handlers for > mobile
+		\*                               */
+		if($(window).width() > 992){
+			sentara.lastScrollTop = 0;
+			$(window).bind('scroll',function(e){
+				var st = $(this).scrollTop();
+				if (st > sentara.lastScrollTop){
+				// downscroll code
+					sentara.parallaxScroll('down');
+				} else {
+				// upscroll code
+					sentara.parallaxScroll('up');
+				}
+				sentara.lastScrollTop = st;
+			});
+
+			$(window).resize(function(){
+				sentara.setSize();
+			});
+			$(document).on('keydown', function(e){
+				sentara.keyNav(e);
+			});
+		}
+
 		slides = $('.slide');
 		documentHeight = $(document).height();
 		numberOfSlides = slides.length;
@@ -24,24 +49,51 @@ var sentara = function(){
 		$('#nav ul li').bind('click',function(){
 			var slideNum = $(this).attr('attrSlideNumber');
 			sentara.scrollTo(slideNum);
-			hoverActive = true;
-		}).bind('mouseover',function(){
-			if($(this).hasClass('active')){
-				hoverActive = true;
-			}else{
-				$(this).addClass('active');
-			}
-		}).bind('mouseout',function(){
-			if(!hoverActive){
-				$(this).removeClass('active');
-			}
-			hoverActive = false;
 		});
 
 		$('.next button, .next .caret').bind('click',function(){
 			sentara.nextSlide();
 		});
-	});
+		$(".lazy").lazyload({effect : "fadeIn"});
+
+		$('#slides').slidesjs({
+			width: 400,
+			height: 250,
+			play: {
+				active: false,
+				// [boolean] Generate the play and stop buttons.
+				// You cannot use your own buttons. Sorry.
+				effect: "fade",
+				// [string] Can be either "slide" or "fade".
+				interval: 5000,
+				// [number] Time spent on each slide in milliseconds.
+				auto: false,
+				// [boolean] Start playing the slideshow on load.
+				swap: true,
+				// [boolean] show/hide stop and play buttons
+				pauseOnHover: false,
+				// [boolean] pause a playing slideshow on hover
+				restartDelay: 2500
+				// [number] restart delay on inactive slideshow
+			},
+			navigation: {
+				effect: "fade"
+			},
+			pagination: {
+				effect: "fade"
+			},
+			subHeadContainer : $('#subHeadContainer'),
+			effect: {
+				fade: {
+					speed: 800,
+					// [number] Speed in milliseconds of the fade animation.
+					crossfade: true
+					// [boolean] Cross-fade the transition.
+				}
+			}
+
+		});
+	}); // ################### METHODS #########################
 	return {
 		parallaxScroll : function(direction){
 			var scrolled = $(window).scrollTop(),
@@ -83,7 +135,7 @@ var sentara = function(){
 			htmlbody.animate({
 				scrollTop: (windowHeight*slide) - windowHeight
 			}, 1600, 'easeInOutExpo', function() { //era 600 easeOutQuint
-				console.log(currentSlide);
+				
 			});
 		},
 		keyNav : function(e){
@@ -103,30 +155,3 @@ var sentara = function(){
 		}
 	};
 }();
-
-
-/*                             *\
-   event handlers for > mobile
-\*                             */
-if($(window).width() > 768){
-	sentara.lastScrollTop = 0;
-	$(window).bind('scroll',function(e){
-		var st = $(this).scrollTop();
-		if (st > sentara.lastScrollTop){
-		// downscroll code
-			sentara.parallaxScroll('down');
-		} else {
-		// upscroll code
-			sentara.parallaxScroll('up');
-		}
-		sentara.lastScrollTop = st;
-	});
-
-
-	$(window).resize(function(){
-		sentara.setSize();
-	});
-	$(document).on('keydown', function(e){
-		sentara.keyNav(e);
-	});
-}

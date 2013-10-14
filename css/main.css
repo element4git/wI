@@ -1,1 +1,119 @@
-@charset "UTF-8";*{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}html,body,div,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,ol,ul,li,form,legend,label,table,header,footer,nav,section,figure{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}header,footer,nav,section,article,hgroup,figure{display:block}.wrapper{display:inline-block}.wrapper:after{content:".";display:block;height:0;clear:both;visibility:hidden}* html .wrapper{height:1%}.wrapper{display:block}body{font-family:"Asap","HelveticaNeue","Arial",sans-serif;font-size:16px;line-height:1.428571429;color:#333333;background-color:#000}h1{font-size:4.4em;line-height:1.1em;color:#fff}h2{font-size:2.3em}h3{font-size:1.5em;font-weight:normal;color:#4d1521}hr{background-image:url(../img/background/hr.png);background-repeat:repeat;height:4px;border:none;margin:1.1em 0}ul li{list-style:none;margin-left:0.9em}ul li:before{color:#fff;margin-left:-0.7em;content:"\2022";font-size:1.5em;padding-right:.25em;position:relative;top:.1em}
+@charset "UTF-8";
+/*------------------------------------*\
+	$SENTRA STYLE GUIDE
+\*------------------------------------*/
+/*-----------------------------------------------------*\
+  reset & variables & mixins
+\*-----------------------------------------------------*/
+/*------------------------------------*\
+    $RESET
+\*------------------------------------*/
+/* line 4, scss/imports/_reset.scss */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 9, scss/imports/_reset.scss */
+html, body, div, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, ol, ul, li, form, legend, label, table, header, footer, nav, section, figure {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 13, scss/imports/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 17, scss/imports/_reset.scss */
+header, footer, nav, section, article, hgroup, figure {
+  display: block;
+}
+
+/* Clearing floats without extra markup  */
+/* line 22, scss/imports/_reset.scss */
+.wrapper {
+  display: inline-block;
+}
+
+/* line 23, scss/imports/_reset.scss */
+.wrapper:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/* line 24, scss/imports/_reset.scss */
+* html .wrapper {
+  height: 1%;
+}
+
+/* line 25, scss/imports/_reset.scss */
+.wrapper {
+  display: block;
+}
+
+/* Typography */
+/* line 13, scss/main.scss */
+body {
+  font-family: "Asap", "HelveticaNeue", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 1.428571429;
+  color: #333333;
+  background-color: #000;
+}
+
+/* line 21, scss/main.scss */
+h1 {
+  font-size: 4.4em;
+  line-height: 1.1em;
+  color: white;
+}
+
+/* line 25, scss/main.scss */
+h2 {
+  font-size: 2.3em;
+}
+
+/* line 28, scss/main.scss */
+h3 {
+  font-size: 1.5em;
+  font-weight: normal;
+  color: #4d1521;
+}
+
+/* line 34, scss/main.scss */
+hr {
+  background-image: url(../img/background/hr.png);
+  background-repeat: repeat;
+  height: 4px;
+  border: none;
+  margin: 1.1em 0;
+}
+
+/* line 42, scss/main.scss */
+ul li {
+  list-style: none;
+  /* if you’re not already using a reset */
+  margin-left: 0.9em;
+}
+
+/* line 46, scss/main.scss */
+ul.list li:before {
+  color: #fff;
+  /* set color to red */
+  margin-left: -0.7em;
+  content: "\2022";
+  /* /2022 is the numerical unicode for &bull; */
+  font-size: 1.5em;
+  /* set the font-size of the bullet if necessary. Make sure to use em or %*/
+  padding-right: .25em;
+  /* give the bullet some padding from the text Make sure to use em*/
+  position: relative;
+  top: .1em;
+  /* set the vertical position of the bullet if necessary. Make sure to use em or % */
+}
