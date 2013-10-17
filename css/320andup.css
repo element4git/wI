@@ -315,6 +315,34 @@ p {
   display: block;
 }
 
+/* line 208, scss/responsive/_base.scss */
+.toolTip {
+  width: 85px;
+  height: 48px;
+  background-color: white;
+  border-radius: 5px;
+  position: absolute;
+  right: 0;
+  display: none;
+}
+/* line 216, scss/responsive/_base.scss */
+.toolTip span {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+/* line 221, scss/responsive/_base.scss */
+.toolTip .caret {
+  position: absolute;
+  bottom: -17px;
+  left: 36px;
+}
+/* line 226, scss/responsive/_base.scss */
+.toolTip .caret:before {
+  content: '\25BC';
+  color: #fff;
+}
+
 @media only screen and (min-width: 600px) {
   /* 600 =================================================== */
 }
@@ -378,10 +406,11 @@ p {
     top: 8%;
   }
   /* line 50, scss/responsive/_992.scss */
-  .slide.is-wide .content.map {
+  .slide .content.map {
     top: 1%;
+    padding: 4%;
   }
-  /* line 53, scss/responsive/_992.scss */
+  /* line 54, scss/responsive/_992.scss */
   .slide .sideBar {
     height: 100%;
     padding-top: 1em;
@@ -394,12 +423,12 @@ p {
     background-repeat: no-repeat;
     display: block;
   }
-  /* line 65, scss/responsive/_992.scss */
+  /* line 66, scss/responsive/_992.scss */
   .slide .centerBar {
     display: inline;
     width: 100%;
   }
-  /* line 69, scss/responsive/_992.scss */
+  /* line 70, scss/responsive/_992.scss */
   .slide .next {
     position: absolute;
     bottom: 0;
@@ -408,7 +437,7 @@ p {
     display: block;
     text-align: center;
   }
-  /* line 76, scss/responsive/_992.scss */
+  /* line 77, scss/responsive/_992.scss */
   .slide .next span {
     display: inline-block;
     padding: 1em;
@@ -418,7 +447,7 @@ p {
     position: relative;
     top: 0.2em;
   }
-  /* line 85, scss/responsive/_992.scss */
+  /* line 86, scss/responsive/_992.scss */
   .slide .next .box {
     display: inline-block;
     width: 60px;
@@ -426,7 +455,7 @@ p {
     position: relative;
     cursor: pointer;
   }
-  /* line 92, scss/responsive/_992.scss */
+  /* line 93, scss/responsive/_992.scss */
   .slide .next button {
     border: none;
     width: 100%;
@@ -436,7 +465,7 @@ p {
     opacity: 0.1;
     cursor: pointer;
   }
-  /* line 100, scss/responsive/_992.scss */
+  /* line 101, scss/responsive/_992.scss */
   .slide .next .caret {
     background-image: url("../img/background/downCaret.png");
     bottom: 18px;
@@ -447,17 +476,17 @@ p {
     width: 36px;
   }
 
-  /* line 112, scss/responsive/_992.scss */
+  /* line 113, scss/responsive/_992.scss */
   .slidesjs-pagination li:before {
     margin: 0 34%;
   }
 
-  /* line 116, scss/responsive/_992.scss */
+  /* line 117, scss/responsive/_992.scss */
   #mapKey {
     left: 4%;
   }
 
-  /* line 120, scss/responsive/_992.scss */
+  /* line 121, scss/responsive/_992.scss */
   #nav {
     position: fixed;
     right: 20px;
@@ -468,7 +497,7 @@ p {
     display: block;
   }
 
-  /* line 129, scss/responsive/_992.scss */
+  /* line 130, scss/responsive/_992.scss */
   #nav .navbg {
     width: 100%;
     height: 100%;
@@ -481,14 +510,24 @@ p {
     border-radius: 6px;
   }
 
-  /* line 144, scss/responsive/_992.scss */
+  /* line 142, scss/responsive/_992.scss */
+  #nav .toolTip .caret {
+    bottom: 13px;
+    left: 83px;
+  }
+  /* line 146, scss/responsive/_992.scss */
+  #nav .toolTip .caret:before {
+    content: "\25BA";
+  }
+
+  /* line 151, scss/responsive/_992.scss */
   #nav ul li {
     margin: 0;
     position: relative;
     z-index: 10;
   }
 
-  /* line 149, scss/responsive/_992.scss */
+  /* line 156, scss/responsive/_992.scss */
   #nav ul li:before {
     border-radius: 5px 5px 5px 5px;
     color: #FFFFFF;
@@ -503,41 +542,41 @@ p {
     opacity: 0.6;
   }
 
-  /* line 162, scss/responsive/_992.scss */
+  /* line 169, scss/responsive/_992.scss */
   #nav ul li.active:before {
     opacity: 1;
     background-color: #Fff;
   }
 
-  /* line 166, scss/responsive/_992.scss */
+  /* line 173, scss/responsive/_992.scss */
   #nav ul li:hover:before {
     opacity: 1;
     background-color: #Fff;
   }
 
-  /* line 171, scss/responsive/_992.scss */
+  /* line 178, scss/responsive/_992.scss */
   #mainContent, #content {
     width: 100%;
     height: 100%;
   }
 
-  /* line 173, scss/responsive/_992.scss */
+  /* line 180, scss/responsive/_992.scss */
   .column {
     width: 40%;
     min-width: 520px;
   }
 
-  /* line 174, scss/responsive/_992.scss */
+  /* line 181, scss/responsive/_992.scss */
   .smallScreen {
     display: none;
   }
 
-  /* line 178, scss/responsive/_992.scss */
+  /* line 185, scss/responsive/_992.scss */
   ul {
     font-size: 1em;
   }
 
-  /* line 179, scss/responsive/_992.scss */
+  /* line 186, scss/responsive/_992.scss */
   p {
     font-size: 1em;
   }

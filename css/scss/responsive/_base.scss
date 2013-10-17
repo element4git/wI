@@ -206,7 +206,27 @@ p{font-size:1.5em;}
 
 
 .toolTip{
-	
+	width:85px;
+	height:48px;
+	background-color:$secondary;
+	border-radius:5px;
+	position:absolute;
+	right:0;
+	display:none;
+	& span{
+		display: table-cell;
+	    text-align: center;
+	    vertical-align: middle;
+	}
+	& .caret{
+		position: absolute;
+		bottom:-17px;
+		left:36px;
+	}
+	& .caret:before{
+		content:'\25BC';
+		color:#fff;
+	}
 }
 
 

@@ -4,7 +4,9 @@ var sentara = function(){
 		documentHeight,
 		slides,
 		currentSlide = 1,
-		htmlbody;
+		htmlbody,
+		navToolTip,
+		mapToolTip;
 	$(function(){ //######### INIT #######################
 
 		/*                               *\
@@ -40,6 +42,8 @@ var sentara = function(){
 		documentHeight = $(document).height();
 		numberOfSlides = slides.length;
 		htmlbody = $('html,body');
+		navToolTip = $('#nav .toolTip');
+		mapToolTip = $('.map .toolTip');
 
 		currentSlide = (Math.floor($(window).scrollTop() / windowHeight)) + 1;
 
@@ -53,7 +57,14 @@ var sentara = function(){
 		$('#nav ul li').bind('click',function(){
 			var slideNum = $(this).attr('attrSlideNumber');
 			sentara.scrollTo(slideNum);
-		});
+		}).bind('mouseover',function(){
+			var navPosition = $(this).position(),
+				toolTipOffSet = $(this).parent().width();
+			navToolTip.css({left:navPosition.left - (toolTipOffSet + 85), top:navPosition.top - 18, display:'table'}).find('.pageNumber').html($(this).attr('attrslidenumber'))
+        }).bind('mouseout',function(){
+			navToolTip.hide();
+        });
+
 
 		$('.next button, .next .caret').bind('click',function(){
 			sentara.nextSlide();

@@ -47,8 +47,9 @@
 	&.is-wide .content{
 		top:8%;
 	}
-	&.is-wide .content.map{
+	& .content.map{
 		top:1%;
+		padding:4%;
 	}
 	& .sideBar{
 		height: 100%;
@@ -138,7 +139,13 @@
 }
 
 #nav .toolTip{
-
+	& .caret{
+		bottom:13px;
+		left:83px;
+	}
+	& .caret:before{
+		content:"\25BA";
+	}
 }
 
 #nav ul li{
