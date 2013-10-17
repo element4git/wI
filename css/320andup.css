@@ -99,11 +99,12 @@ header, footer, nav, section, article, hgroup, figure {
 }
 /* line 51, scss/responsive/_base.scss */
 .slide .content.map {
-  padding: 0 8%;
+  padding: 8%;
 }
 /* line 53, scss/responsive/_base.scss */
 .slide .content.map h3 {
   margin-bottom: 1em;
+  font-size: 1em;
 }
 /* line 55, scss/responsive/_base.scss */
 .slide.is-wide .content {
@@ -167,7 +168,7 @@ p {
 #mapKey {
   position: absolute;
   left: 4%;
-  top: 36%;
+  top: 39%;
   display: block;
 }
 /* line 92, scss/responsive/_base.scss */
@@ -405,16 +406,27 @@ p {
     left: 0;
     width: 100%;
     display: block;
+    text-align: center;
   }
-  /* line 75, scss/responsive/_992.scss */
+  /* line 76, scss/responsive/_992.scss */
+  .slide .next span {
+    display: inline-block;
+    padding: 1em;
+    color: white;
+    font-size: 1.2em;
+    font-style: italic;
+    position: relative;
+    top: 0.2em;
+  }
+  /* line 85, scss/responsive/_992.scss */
   .slide .next .box {
-    margin: 0 auto;
+    display: inline-block;
     width: 60px;
     height: 60px;
     position: relative;
     cursor: pointer;
   }
-  /* line 82, scss/responsive/_992.scss */
+  /* line 92, scss/responsive/_992.scss */
   .slide .next button {
     border: none;
     width: 100%;
@@ -424,7 +436,7 @@ p {
     opacity: 0.1;
     cursor: pointer;
   }
-  /* line 90, scss/responsive/_992.scss */
+  /* line 100, scss/responsive/_992.scss */
   .slide .next .caret {
     background-image: url("../img/background/downCaret.png");
     bottom: 18px;
@@ -435,17 +447,17 @@ p {
     width: 36px;
   }
 
-  /* line 102, scss/responsive/_992.scss */
+  /* line 112, scss/responsive/_992.scss */
   .slidesjs-pagination li:before {
     margin: 0 34%;
   }
 
-  /* line 106, scss/responsive/_992.scss */
+  /* line 116, scss/responsive/_992.scss */
   #mapKey {
     left: 4%;
   }
 
-  /* line 110, scss/responsive/_992.scss */
+  /* line 120, scss/responsive/_992.scss */
   #nav {
     position: fixed;
     right: 20px;
@@ -456,7 +468,7 @@ p {
     display: block;
   }
 
-  /* line 119, scss/responsive/_992.scss */
+  /* line 129, scss/responsive/_992.scss */
   #nav .navbg {
     width: 100%;
     height: 100%;
@@ -469,14 +481,14 @@ p {
     border-radius: 6px;
   }
 
-  /* line 129, scss/responsive/_992.scss */
+  /* line 144, scss/responsive/_992.scss */
   #nav ul li {
     margin: 0;
     position: relative;
     z-index: 10;
   }
 
-  /* line 134, scss/responsive/_992.scss */
+  /* line 149, scss/responsive/_992.scss */
   #nav ul li:before {
     border-radius: 5px 5px 5px 5px;
     color: #FFFFFF;
@@ -491,41 +503,41 @@ p {
     opacity: 0.6;
   }
 
-  /* line 147, scss/responsive/_992.scss */
+  /* line 162, scss/responsive/_992.scss */
   #nav ul li.active:before {
     opacity: 1;
     background-color: #Fff;
   }
 
-  /* line 151, scss/responsive/_992.scss */
+  /* line 166, scss/responsive/_992.scss */
   #nav ul li:hover:before {
     opacity: 1;
     background-color: #Fff;
   }
 
-  /* line 156, scss/responsive/_992.scss */
+  /* line 171, scss/responsive/_992.scss */
   #mainContent, #content {
     width: 100%;
     height: 100%;
   }
 
-  /* line 158, scss/responsive/_992.scss */
+  /* line 173, scss/responsive/_992.scss */
   .column {
     width: 40%;
     min-width: 520px;
   }
 
-  /* line 159, scss/responsive/_992.scss */
+  /* line 174, scss/responsive/_992.scss */
   .smallScreen {
     display: none;
   }
 
-  /* line 163, scss/responsive/_992.scss */
+  /* line 178, scss/responsive/_992.scss */
   ul {
     font-size: 1em;
   }
 
-  /* line 164, scss/responsive/_992.scss */
+  /* line 179, scss/responsive/_992.scss */
   p {
     font-size: 1em;
   }

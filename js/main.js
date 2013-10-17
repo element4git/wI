@@ -30,6 +30,10 @@ var sentara = function(){
 			$(document).on('keydown', function(e){
 				sentara.keyNav(e);
 			});
+
+			$(".lazy").lazyload({effect : "fadeIn",skip_invisible : false});
+		}else{
+			$(".lazy").lazyload({skip_invisible : false, threshold:windowHeight * 2});
 		}
 
 		slides = $('.slide');
@@ -54,7 +58,6 @@ var sentara = function(){
 		$('.next button, .next .caret').bind('click',function(){
 			sentara.nextSlide();
 		});
-		$(".lazy").lazyload({effect : "fadeIn"});
 
 		$('#slides').slidesjs({
 			width: 400,
