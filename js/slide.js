@@ -188,8 +188,8 @@
           }).bind('mouseover',function(){
               var navPosition = $(this).position(),
                 toolTipOffSet = $(this).parent().height();
-              mapToolTip.css({opacity:0, left:navPosition.left + 16, top:navPosition.top - (toolTipOffSet + 43), display:'table'})
-                .stop(true, true)
+              mapToolTip.css({opacity:0, left:navPosition.left + 4, top:navPosition.top - (toolTipOffSet + 43), display:'table'})
+                .stop()
                 .animate({opacity:1},500)
                 .find('.pageNumber')
                 .html($(this).attr('data-slideYear'));
