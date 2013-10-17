@@ -22,7 +22,7 @@
 
 
 #slideBox{
-	max-width:830px;
+	max-width:730px;
 }
 #slideNavigation .nextCaret, 
 #slideNavigation .previousCaret{
@@ -33,4 +33,13 @@
 	position:absolute; 
 	left:4%; 
 	top:23%; 
+}
+
+.slide{
+	& .content.map{
+		padding:1%;
+	}
+}
+.slidesjs-pagination li:before{
+	margin: 0 32%;
 }

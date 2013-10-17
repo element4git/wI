@@ -183,7 +183,7 @@ p {
 
 /* line 100, scss/responsive/_base.scss */
 #slideBox {
-  max-width: 430px;
+  max-width: 350px;
   margin: 0 auto;
   width: 100%;
   height: 100%;
@@ -344,6 +344,12 @@ p {
   color: #fff;
 }
 
+@media only screen and (min-width: 480px) {
+  /* line 1, scss/responsive/_480.scss */
+  .slidesjs-pagination li:before {
+    margin: 0 7%;
+  }
+}
 @media only screen and (min-width: 600px) {
   /* 600 =================================================== */
 }
@@ -351,7 +357,7 @@ p {
   /* 768 =================================================== */
   /* line 24, scss/responsive/_768.scss */
   #slideBox {
-    max-width: 830px;
+    max-width: 730px;
   }
 
   /* line 28, scss/responsive/_768.scss */
@@ -365,6 +371,16 @@ p {
     position: absolute;
     left: 4%;
     top: 23%;
+  }
+
+  /* line 39, scss/responsive/_768.scss */
+  .slide .content.map {
+    padding: 1%;
+  }
+
+  /* line 43, scss/responsive/_768.scss */
+  .slidesjs-pagination li:before {
+    margin: 0 32%;
   }
 }
 @media only screen and (min-width: 992px) {
@@ -409,9 +425,8 @@ p {
   /* line 50, scss/responsive/_992.scss */
   .slide .content.map {
     top: 1%;
-    padding: 4%;
   }
-  /* line 54, scss/responsive/_992.scss */
+  /* line 53, scss/responsive/_992.scss */
   .slide .sideBar {
     height: 100%;
     padding-top: 1em;
@@ -424,12 +439,12 @@ p {
     background-repeat: no-repeat;
     display: block;
   }
-  /* line 66, scss/responsive/_992.scss */
+  /* line 65, scss/responsive/_992.scss */
   .slide .centerBar {
     display: inline;
     width: 100%;
   }
-  /* line 70, scss/responsive/_992.scss */
+  /* line 69, scss/responsive/_992.scss */
   .slide .next {
     position: absolute;
     bottom: 0;
@@ -438,7 +453,7 @@ p {
     display: block;
     text-align: center;
   }
-  /* line 77, scss/responsive/_992.scss */
+  /* line 76, scss/responsive/_992.scss */
   .slide .next span {
     display: inline-block;
     padding: 1em;
@@ -448,7 +463,7 @@ p {
     position: relative;
     top: 0.2em;
   }
-  /* line 86, scss/responsive/_992.scss */
+  /* line 85, scss/responsive/_992.scss */
   .slide .next .box {
     display: inline-block;
     width: 60px;
@@ -456,7 +471,7 @@ p {
     position: relative;
     cursor: pointer;
   }
-  /* line 93, scss/responsive/_992.scss */
+  /* line 92, scss/responsive/_992.scss */
   .slide .next button {
     border: none;
     width: 100%;
@@ -466,7 +481,7 @@ p {
     opacity: 0.1;
     cursor: pointer;
   }
-  /* line 101, scss/responsive/_992.scss */
+  /* line 100, scss/responsive/_992.scss */
   .slide .next .caret {
     background-image: url("../img/background/downCaret.png");
     bottom: 18px;
@@ -477,17 +492,12 @@ p {
     width: 36px;
   }
 
-  /* line 113, scss/responsive/_992.scss */
-  .slidesjs-pagination li:before {
-    margin: 0 34%;
-  }
-
-  /* line 117, scss/responsive/_992.scss */
+  /* line 114, scss/responsive/_992.scss */
   #mapKey {
     left: 4%;
   }
 
-  /* line 121, scss/responsive/_992.scss */
+  /* line 118, scss/responsive/_992.scss */
   #nav {
     position: fixed;
     right: 20px;
@@ -498,7 +508,7 @@ p {
     display: block;
   }
 
-  /* line 130, scss/responsive/_992.scss */
+  /* line 127, scss/responsive/_992.scss */
   #nav .navbg {
     width: 100%;
     height: 100%;
@@ -511,24 +521,24 @@ p {
     border-radius: 6px;
   }
 
-  /* line 142, scss/responsive/_992.scss */
+  /* line 139, scss/responsive/_992.scss */
   #nav .toolTip .caret {
     bottom: 13px;
     left: 83px;
   }
-  /* line 146, scss/responsive/_992.scss */
+  /* line 143, scss/responsive/_992.scss */
   #nav .toolTip .caret:before {
     content: "\25BA";
   }
 
-  /* line 151, scss/responsive/_992.scss */
+  /* line 148, scss/responsive/_992.scss */
   #nav ul li {
     margin: 0;
     position: relative;
     z-index: 10;
   }
 
-  /* line 156, scss/responsive/_992.scss */
+  /* line 153, scss/responsive/_992.scss */
   #nav ul li:before {
     border-radius: 5px 5px 5px 5px;
     color: #FFFFFF;
@@ -543,41 +553,41 @@ p {
     opacity: 0.6;
   }
 
-  /* line 169, scss/responsive/_992.scss */
+  /* line 166, scss/responsive/_992.scss */
   #nav ul li.active:before {
     opacity: 1;
     background-color: #Fff;
   }
 
-  /* line 173, scss/responsive/_992.scss */
+  /* line 170, scss/responsive/_992.scss */
   #nav ul li:hover:before {
     opacity: 1;
     background-color: #Fff;
   }
 
-  /* line 178, scss/responsive/_992.scss */
+  /* line 175, scss/responsive/_992.scss */
   #mainContent, #content {
     width: 100%;
     height: 100%;
   }
 
-  /* line 180, scss/responsive/_992.scss */
+  /* line 177, scss/responsive/_992.scss */
   .column {
     width: 40%;
     min-width: 520px;
   }
 
-  /* line 181, scss/responsive/_992.scss */
+  /* line 178, scss/responsive/_992.scss */
   .smallScreen {
     display: none;
   }
 
-  /* line 185, scss/responsive/_992.scss */
+  /* line 182, scss/responsive/_992.scss */
   ul {
     font-size: 1em;
   }
 
-  /* line 186, scss/responsive/_992.scss */
+  /* line 183, scss/responsive/_992.scss */
   p {
     font-size: 1em;
   }
