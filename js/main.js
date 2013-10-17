@@ -5,8 +5,7 @@ var sentara = function(){
 		slides,
 		currentSlide = 1,
 		htmlbody,
-		navToolTip,
-		mapToolTip;
+		navToolTip;
 	$(function(){ //######### INIT #######################
 
 		/*                               *\
@@ -43,7 +42,6 @@ var sentara = function(){
 		numberOfSlides = slides.length;
 		htmlbody = $('html,body');
 		navToolTip = $('#nav .toolTip');
-		mapToolTip = $('.map .toolTip');
 
 		currentSlide = (Math.floor($(window).scrollTop() / windowHeight)) + 1;
 
@@ -60,7 +58,9 @@ var sentara = function(){
 		}).bind('mouseover',function(){
 			var navPosition = $(this).position(),
 				toolTipOffSet = $(this).parent().width();
-			navToolTip.css({left:navPosition.left - (toolTipOffSet + 85), top:navPosition.top - 18, display:'table'}).find('.pageNumber').html($(this).attr('attrslidenumber'))
+			navToolTip.css({left:navPosition.left - (toolTipOffSet + 85), top:navPosition.top - 18, display:'table'})
+				.find('.pageNumber')
+				.html($(this).attr('attrslidenumber'));
         }).bind('mouseout',function(){
 			navToolTip.hide();
         });
@@ -125,9 +125,6 @@ var sentara = function(){
 				$('.content.fixed').removeClass('fixed');
 				slideObj.find('.content').addClass('fixed');
 			}
-
-			
-			
 			var content = $(slides[slide+1]).find('.content');
 
 			if(percent < 0.93 && currentSlide !==0){

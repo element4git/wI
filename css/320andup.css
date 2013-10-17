@@ -284,13 +284,13 @@ p {
 }
 
 /* line 180, scss/responsive/_base.scss */
-#slideNavigation > div {
+#slideNavigation > div.inline {
   display: inline-block;
   position: relative;
   z-index: 10;
 }
 /* line 184, scss/responsive/_base.scss */
-#slideNavigation > div a {
+#slideNavigation > div.inline a {
   color: #FFF;
   text-decoration: none;
 }
@@ -324,20 +324,21 @@ p {
   position: absolute;
   right: 0;
   display: none;
+  z-index: 11;
 }
-/* line 216, scss/responsive/_base.scss */
+/* line 217, scss/responsive/_base.scss */
 .toolTip span {
   display: table-cell;
   text-align: center;
   vertical-align: middle;
 }
-/* line 221, scss/responsive/_base.scss */
+/* line 222, scss/responsive/_base.scss */
 .toolTip .caret {
   position: absolute;
   bottom: -17px;
   left: 36px;
 }
-/* line 226, scss/responsive/_base.scss */
+/* line 227, scss/responsive/_base.scss */
 .toolTip .caret:before {
   content: '\25BC';
   color: #fff;

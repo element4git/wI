@@ -55,7 +55,9 @@
     })();
     Plugin.prototype.init = function() {
       var $element, $nav={}, nextButton, pagination, playButton, prevButton, stopButton,
-        _this = this;
+        _this = this, mapToolTip;
+
+      mapToolTip = $('#slideBox .toolTip');
       $element = $(this.element);
       $nav.pagination =$($('#slideNavigation').find('.pagination'));
       $nav.next =$($('#slideNavigation').find('.nextCaret'));
@@ -173,14 +175,24 @@
         }).appendTo($nav.pagination);
         $.each(new Array(this.data.total), function(i) {
           var paginationItem, paginationLink;
+          var insertYear = $(_this.options.subHeadContainer.children()[i]).attr('data-year');
           paginationItem = $("<li>", {
             "class": "slidesjs-pagination-item",
-            "data-slidesjs-item": i
+            "data-slidesjs-item": i,
+            "data-slideYear":insertYear
           }).appendTo(pagination);
           return paginationItem.click(function(e) {
             e.preventDefault();
             _this.stop(true);
             return _this.goto(($(e.currentTarget).attr("data-slidesjs-item") * 1) + 1);
+          }).bind('mouseover',function(){
+              var navPosition = $(this).position(),
+                toolTipOffSet = $(this).parent().height();
+              mapToolTip.css({left:navPosition.left + 16, top:navPosition.top - (toolTipOffSet + 43), display:'table'})
+                .find('.pageNumber')
+                .html($(this).attr('data-slideYear'));
+          }).bind('mouseout',function(){
+              mapToolTip.hide();
           });
         });
       }

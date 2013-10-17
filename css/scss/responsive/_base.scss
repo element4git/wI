@@ -177,7 +177,7 @@ p{font-size:1.5em;}
 	text-align:center;
 	padding:5px;
 }
-#slideNavigation > div{
+#slideNavigation > div.inline{
 	display:inline-block;
 	position:relative;
 	z-index: 10;
@@ -213,6 +213,7 @@ p{font-size:1.5em;}
 	position:absolute;
 	right:0;
 	display:none;
+	z-index:11;
 	& span{
 		display: table-cell;
 	    text-align: center;
