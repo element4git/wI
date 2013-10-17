@@ -188,11 +188,15 @@
           }).bind('mouseover',function(){
               var navPosition = $(this).position(),
                 toolTipOffSet = $(this).parent().height();
-              mapToolTip.css({left:navPosition.left + 16, top:navPosition.top - (toolTipOffSet + 43), display:'table'})
+              mapToolTip.css({opacity:0, left:navPosition.left + 16, top:navPosition.top - (toolTipOffSet + 43), display:'table'})
+                .stop(true, true)
+                .animate({opacity:1},500)
                 .find('.pageNumber')
                 .html($(this).attr('data-slideYear'));
           }).bind('mouseout',function(){
-              mapToolTip.hide();
+              mapToolTip.stop(true, true).animate({opacity:0},500,function(){
+                $(this).hide();
+              });
           });
         });
       }

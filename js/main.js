@@ -58,11 +58,15 @@ var sentara = function(){
 		}).bind('mouseover',function(){
 			var navPosition = $(this).position(),
 				toolTipOffSet = $(this).parent().width();
-			navToolTip.css({left:navPosition.left - (toolTipOffSet + 85), top:navPosition.top - 18, display:'table'})
+			navToolTip.css({opacity:0, left:navPosition.left - (toolTipOffSet + 85), top:navPosition.top - 18, display:'table'})
+				.stop()
+                .animate({opacity:1},500)
 				.find('.pageNumber')
 				.html($(this).attr('attrslidenumber'));
         }).bind('mouseout',function(){
-			navToolTip.hide();
+			navToolTip.stop(true, true).animate({opacity:0},500,function(){
+				$(this).hide();
+			});
         });
 
 
