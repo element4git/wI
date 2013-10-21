@@ -126,7 +126,7 @@ p{font-size:1.5em;}
 
 .slidesjs-pagination li {
   float: left;
-  margin: 0 1px;
+	margin: 0 29%;
   cursor: pointer;
 }
 .slidesjs-pagination li:before{
@@ -140,7 +140,6 @@ p{font-size:1.5em;}
     padding: 5px;
     border:solid 1px #FFFFFF;
 	opacity:0.6;
-	margin: 0 29%;
 }
 #subHeadContainer{display:none;}
 .slidesjs-pagination li.active:before,
@@ -211,7 +210,6 @@ p{font-size:1.5em;}
 	background-color:$secondary;
 	border-radius:5px;
 	position:absolute;
-	right:0;
 	display:none;
 	z-index:11;
 	& span{
@@ -221,7 +219,7 @@ p{font-size:1.5em;}
 	}
 	& .caret{
 		position: absolute;
-		bottom:-17px;
+		bottom:-16px;
 		left:36px;
 	}
 	& .caret:before{

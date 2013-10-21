@@ -5,7 +5,8 @@ var sentara = function(){
 		slides,
 		currentSlide = 1,
 		htmlbody,
-		navToolTip;
+		navToolTip,
+		tootipOpacitySpeed = 1000; //set tool tip fade in speed for both nav and map
 	$(function(){ //######### INIT #######################
 
 		/*                               *\
@@ -60,11 +61,11 @@ var sentara = function(){
 				toolTipOffSet = $(this).parent().width();
 			navToolTip.css({opacity:0, left:navPosition.left - (toolTipOffSet + 85), top:navPosition.top - 18, display:'table'})
 				.stop()
-                .animate({opacity:1},500)
+                .animate({opacity:1},tootipOpacitySpeed)
 				.find('.pageNumber')
 				.html($(this).attr('attrslidenumber'));
         }).bind('mouseout',function(){
-			navToolTip.stop(true, true).animate({opacity:0},500,function(){
+			navToolTip.stop(true, true).animate({opacity:0},tootipOpacitySpeed,function(){
 				$(this).hide();
 			});
         });
@@ -108,6 +109,10 @@ var sentara = function(){
 					crossfade: true
 					// [boolean] Cross-fade the transition.
 				}
+			},
+			tooltip:{
+				speed:tootipOpacitySpeed,
+				barOffset:46
 			}
 
 		});

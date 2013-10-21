@@ -1,25 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<!-- HTML5 Boilerplate -->
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Sentara</title>
+    <!--[if lt IE 9]><!-->
+    <link href="css/ie.css" rel="stylesheet">
+    <!--<![endif]-->
+    <!--[if gt IE 8]><!-->
     <link href="css/main.css" rel="stylesheet">
     <link href="css/320andup.css" rel="stylesheet">
+    <!--<![endif]-->
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Asap">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
   </head>
 
   <body>
     <div id="mainContent">
       
       <div id="nav">
-        <ul>
-        </ul>
+        <div class="pagination">
+          <ul></ul>
+          <div class="toolTip"><div class="caret"></div><span>Pg <strong class="pageNumber">1</strong></span></div>
+        </div>
         <div class="navbg"></div>
-        <div class="toolTip"><div class="caret"></div><span>Pg <strong class="pageNumber">1</strong></span></div>
+        
       </div>
 
       <div id="content">
@@ -184,7 +194,7 @@
                 <h3 data-year="2010">But Colorado lost the battle in 2010.</h3>
               </div>
               
-              <div id="slideNavigation"><div class="toolTip"><div class="caret"></div><span><strong class="pageNumber">1</strong></span></div><span class="slideNavBg"></span><div class="inline previousCaret"></div><div class="inline pagination"></div><div class="inline nextCaret"></div></div>
+              <div id="slideNavigation"><span class="slideNavBg"></span><div class="inline previousCaret"></div><div class="inline pagination"><div class="toolTip"><div class="caret"></div><span><strong class="pageNumber">1</strong></span></div></div><div class="inline nextCaret"></div></div>
             </div>
           </div>
           <div class="next"><div class="box"><button></button><div class="caret"></div></div></div>
@@ -193,7 +203,6 @@
       </div>  
     </div>
   <script type="text/javascript" src="js/jquery.js"></script>
-  <script type="text/javascript" src="js/slide.js"></script>
   <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
   <script type="text/javascript" src="js/main.js"></script>  
   </body>

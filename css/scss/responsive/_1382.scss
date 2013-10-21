@@ -32,6 +32,9 @@ max-width : 1440px; }
 		display:inline;
 		width:auto;
 	}
+	& .content{
+		top:20%;
+	}
 }
 
 
@@ -39,7 +42,12 @@ max-width : 1440px; }
 #mapKey{
 	left:10%; 
 }
-
+#slideBox{
+	max-width:730px;
+}
+.slidesjs-pagination li:before{
+	margin: 0 32%;
+}
 
 
 

@@ -34,6 +34,10 @@
           crossfade: true
         }
       },
+      tooltip: {
+        speed:600,
+        barOffset:43
+      },
       callback: {
         loaded: function() {},
         start: function() {},
@@ -187,14 +191,15 @@
             return _this.goto(($(e.currentTarget).attr("data-slidesjs-item") * 1) + 1);
           }).bind('mouseover',function(){
               var navPosition = $(this).position(),
-                toolTipOffSet = $(this).parent().height();
-              mapToolTip.css({opacity:0, left:navPosition.left + 4, top:navPosition.top - (toolTipOffSet + 43), display:'table'})
+                  toolTipOffSet = $(this).parent().height();
+              console.log(parseFloat($(this).css('margin-left')))
+              mapToolTip.css({opacity:0, left:((navPosition.left + parseFloat($(this).css('margin-left'))) - 37), top:(navPosition.top) - (toolTipOffSet + _this.options.tooltip.barOffset), display:'table'})
                 .stop()
-                .animate({opacity:1},500)
+                .animate({opacity:1},_this.options.tooltip.speed)
                 .find('.pageNumber')
                 .html($(this).attr('data-slideYear'));
           }).bind('mouseout',function(){
-              mapToolTip.stop(true, true).animate({opacity:0},500,function(){
+              mapToolTip.stop(true, true).animate({opacity:0},_this.options.tooltip.speed,function(){
                 $(this).hide();
               });
           });

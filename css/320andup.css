@@ -216,7 +216,7 @@ p {
 /* line 127, scss/responsive/_base.scss */
 .slidesjs-pagination li {
   float: left;
-  margin: 0 1px;
+  margin: 0 29%;
   cursor: pointer;
 }
 
@@ -232,50 +232,49 @@ p {
   padding: 5px;
   border: solid 1px #FFFFFF;
   opacity: 0.6;
-  margin: 0 29%;
 }
 
-/* line 145, scss/responsive/_base.scss */
+/* line 144, scss/responsive/_base.scss */
 #subHeadContainer {
   display: none;
 }
 
-/* line 147, scss/responsive/_base.scss */
+/* line 146, scss/responsive/_base.scss */
 .slidesjs-pagination li.active:before,
 .slidesjs-pagination li:hover:before {
   opacity: 1;
   background-color: #Fff;
 }
 
-/* line 153, scss/responsive/_base.scss */
+/* line 152, scss/responsive/_base.scss */
 .slidesjs-pagination li a.active,
 .slidesjs-pagination li a:hover.active {
   background-position: 0 -13px;
 }
 
-/* line 157, scss/responsive/_base.scss */
+/* line 156, scss/responsive/_base.scss */
 .slidesjs-pagination li a:hover {
   background-position: 0 -26px;
 }
 
-/* line 162, scss/responsive/_base.scss */
+/* line 161, scss/responsive/_base.scss */
 #slides a:link,
 #slides a:visited {
   color: #333333;
 }
 
-/* line 167, scss/responsive/_base.scss */
+/* line 166, scss/responsive/_base.scss */
 #slides a:hover,
 #slides a:active {
   color: #9e2020;
 }
 
-/* line 171, scss/responsive/_base.scss */
+/* line 170, scss/responsive/_base.scss */
 .navbar {
   overflow: hidden;
 }
 
-/* line 174, scss/responsive/_base.scss */
+/* line 173, scss/responsive/_base.scss */
 #slideNavigation {
   position: relative;
   display: block;
@@ -283,25 +282,25 @@ p {
   padding: 5px;
 }
 
-/* line 180, scss/responsive/_base.scss */
+/* line 179, scss/responsive/_base.scss */
 #slideNavigation > div.inline {
   display: inline-block;
   position: relative;
   z-index: 10;
 }
-/* line 184, scss/responsive/_base.scss */
+/* line 183, scss/responsive/_base.scss */
 #slideNavigation > div.inline a {
   color: #FFF;
   text-decoration: none;
 }
 
-/* line 191, scss/responsive/_base.scss */
+/* line 190, scss/responsive/_base.scss */
 #slideNavigation .nextCaret,
 #slideNavigation .previousCaret {
   display: none;
 }
 
-/* line 195, scss/responsive/_base.scss */
+/* line 194, scss/responsive/_base.scss */
 .slideNavBg {
   width: 100%;
   height: 100%;
@@ -315,30 +314,29 @@ p {
   display: block;
 }
 
-/* line 208, scss/responsive/_base.scss */
+/* line 207, scss/responsive/_base.scss */
 .toolTip {
   width: 85px;
   height: 48px;
   background-color: white;
   border-radius: 5px;
   position: absolute;
-  right: 0;
   display: none;
   z-index: 11;
 }
-/* line 217, scss/responsive/_base.scss */
+/* line 215, scss/responsive/_base.scss */
 .toolTip span {
   display: table-cell;
   text-align: center;
   vertical-align: middle;
 }
-/* line 222, scss/responsive/_base.scss */
+/* line 220, scss/responsive/_base.scss */
 .toolTip .caret {
   position: absolute;
-  bottom: -17px;
+  bottom: -16px;
   left: 36px;
 }
-/* line 227, scss/responsive/_base.scss */
+/* line 225, scss/responsive/_base.scss */
 .toolTip .caret:before {
   content: '\25BC';
   color: #fff;
@@ -347,7 +345,7 @@ p {
 @media only screen and (min-width: 480px) {
   /* line 1, scss/responsive/_480.scss */
   .slidesjs-pagination li:before {
-    margin: 0 7%;
+    margin: 0 1px;
   }
 }
 @media only screen and (min-width: 600px) {
@@ -357,30 +355,30 @@ p {
   /* 768 =================================================== */
   /* line 24, scss/responsive/_768.scss */
   #slideBox {
-    max-width: 730px;
+    max-width: 530px;
   }
 
-  /* line 28, scss/responsive/_768.scss */
+  /* line 27, scss/responsive/_768.scss */
+  .slidesjs-pagination li {
+    margin: 0 5px;
+  }
+
+  /* line 32, scss/responsive/_768.scss */
   #slideNavigation .nextCaret,
   #slideNavigation .previousCaret {
     display: inline;
   }
 
-  /* line 32, scss/responsive/_768.scss */
+  /* line 36, scss/responsive/_768.scss */
   #mapKey {
     position: absolute;
     left: 4%;
     top: 23%;
   }
 
-  /* line 39, scss/responsive/_768.scss */
+  /* line 43, scss/responsive/_768.scss */
   .slide .content.map {
     padding: 1%;
-  }
-
-  /* line 43, scss/responsive/_768.scss */
-  .slidesjs-pagination li:before {
-    margin: 0 32%;
   }
 }
 @media only screen and (min-width: 992px) {
@@ -394,7 +392,7 @@ p {
   .slide .content {
     width: 100%;
     height: 100%;
-    top: 20%;
+    top: 9%;
   }
   /* line 29, scss/responsive/_992.scss */
   .slide .content.fixed {
@@ -507,8 +505,11 @@ p {
     cursor: pointer;
     display: block;
   }
-
-  /* line 127, scss/responsive/_992.scss */
+  /* line 126, scss/responsive/_992.scss */
+  #nav .pagination {
+    position: relative;
+  }
+  /* line 129, scss/responsive/_992.scss */
   #nav .navbg {
     width: 100%;
     height: 100%;
@@ -520,25 +521,22 @@ p {
     z-index: 1;
     border-radius: 6px;
   }
-
-  /* line 139, scss/responsive/_992.scss */
+  /* line 140, scss/responsive/_992.scss */
   #nav .toolTip .caret {
     bottom: 13px;
     left: 83px;
   }
-  /* line 143, scss/responsive/_992.scss */
+  /* line 144, scss/responsive/_992.scss */
   #nav .toolTip .caret:before {
     content: "\25BA";
   }
-
   /* line 148, scss/responsive/_992.scss */
   #nav ul li {
     margin: 0;
     position: relative;
     z-index: 10;
   }
-
-  /* line 153, scss/responsive/_992.scss */
+  /* line 152, scss/responsive/_992.scss */
   #nav ul li:before {
     border-radius: 5px 5px 5px 5px;
     color: #FFFFFF;
@@ -552,42 +550,40 @@ p {
     border: solid 1px #FFFFFF;
     opacity: 0.6;
   }
-
-  /* line 166, scss/responsive/_992.scss */
+  /* line 165, scss/responsive/_992.scss */
   #nav ul li.active:before {
     opacity: 1;
     background-color: #Fff;
   }
-
-  /* line 170, scss/responsive/_992.scss */
+  /* line 169, scss/responsive/_992.scss */
   #nav ul li:hover:before {
     opacity: 1;
     background-color: #Fff;
   }
 
-  /* line 175, scss/responsive/_992.scss */
+  /* line 176, scss/responsive/_992.scss */
   #mainContent, #content {
     width: 100%;
     height: 100%;
   }
 
-  /* line 177, scss/responsive/_992.scss */
+  /* line 178, scss/responsive/_992.scss */
   .column {
     width: 40%;
     min-width: 520px;
   }
 
-  /* line 178, scss/responsive/_992.scss */
+  /* line 179, scss/responsive/_992.scss */
   .smallScreen {
     display: none;
   }
 
-  /* line 182, scss/responsive/_992.scss */
+  /* line 183, scss/responsive/_992.scss */
   ul {
     font-size: 1em;
   }
 
-  /* line 183, scss/responsive/_992.scss */
+  /* line 184, scss/responsive/_992.scss */
   p {
     font-size: 1em;
   }
@@ -608,10 +604,24 @@ p {
     display: inline;
     width: auto;
   }
+  /* line 35, scss/responsive/_1382.scss */
+  .slide .content {
+    top: 20%;
+  }
 
-  /* line 39, scss/responsive/_1382.scss */
+  /* line 42, scss/responsive/_1382.scss */
   #mapKey {
     left: 10%;
+  }
+
+  /* line 45, scss/responsive/_1382.scss */
+  #slideBox {
+    max-width: 730px;
+  }
+
+  /* line 48, scss/responsive/_1382.scss */
+  .slidesjs-pagination li:before {
+    margin: 0 32%;
   }
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {

@@ -25,7 +25,7 @@
 
 	& .content{
 		@include fullscreen;
-		top:20%;
+		top:9%;
 		&.fixed{
 			position:fixed;
 		}
@@ -123,53 +123,54 @@
 	padding:11px;
     cursor: pointer;
     display: block;
-}
-#nav .navbg{
-	@include fullscreen;
-	position:absolute;
-	top:0;
-	left:0;
-	background-color:#fff;
-	opacity:0.1;
-	z-index:1;
-	border-radius:6px;
-}
-
-#nav .toolTip{
-	& .caret{
-		bottom:13px;
-		left:83px;
+    & .pagination{
+    	position: relative;
+    }
+    & .navbg{
+		@include fullscreen;
+		position:absolute;
+		top:0;
+		left:0;
+		background-color:#fff;
+		opacity:0.1;
+		z-index:1;
+		border-radius:6px;
 	}
-	& .caret:before{
-		content:"\25BA";
+	& .toolTip{
+		& .caret{
+			bottom:13px;
+			left:83px;
+		}
+		& .caret:before{
+			content:"\25BA";
+		}
 	}
-}
-
-#nav ul li{
-	margin:0;
-	position:relative;
-	z-index:10;
-} 
-#nav ul li:before{
-	border-radius: 5px 5px 5px 5px;
-    color: #FFFFFF;
-    content: "";
-    display: block;
-    font-size: 0;
-    width: 0;
-    height: 0;
-    margin-bottom: 4px;
-    padding: 5px;
-    border:solid 1px #FFFFFF;
-	opacity:0.6;
-}
-#nav ul li.active:before{
-	opacity:1;
-	background-color:#Fff;
-}
-#nav ul li:hover:before{
-	opacity:1;
-	background-color:#Fff;
+	& ul li{
+		margin:0;
+		position:relative;
+		z-index:10;
+		&:before{
+			border-radius: 5px 5px 5px 5px;
+		    color: #FFFFFF;
+		    content: "";
+		    display: block;
+		    font-size: 0;
+		    width: 0;
+		    height: 0;
+		    margin-bottom: 4px;
+		    padding: 5px;
+		    border:solid 1px #FFFFFF;
+			opacity:0.6;
+		}
+		&.active:before{
+			opacity:1;
+			background-color:#Fff;
+		}
+		&:hover:before{
+			opacity:1;
+			background-color:#Fff;
+		}
+	} 
 }
 
 #mainContent, #content{@include fullscreen;}

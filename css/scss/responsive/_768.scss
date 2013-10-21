@@ -22,8 +22,12 @@
 
 
 #slideBox{
-	max-width:730px;
+	max-width:530px;
 }
+.slidesjs-pagination li{
+	margin: 0 5px;
+}
+
 #slideNavigation .nextCaret, 
 #slideNavigation .previousCaret{
 	display:inline;
@@ -39,7 +43,4 @@
 	& .content.map{
 		padding:1%;
 	}
-}
-.slidesjs-pagination li:before{
-	margin: 0 32%;
 }

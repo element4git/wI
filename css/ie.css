@@ -1,0 +1,372 @@
+/* 480 =================================================== */
+/*------------------------------------*\
+    $RESET
+\*------------------------------------*/
+/* line 4, scss/imports/_reset.scss */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 9, scss/imports/_reset.scss */
+html, body, div, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, ol, ul, li, form, legend, label, table, header, footer, nav, section, figure {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 13, scss/imports/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 17, scss/imports/_reset.scss */
+header, footer, nav, section, article, hgroup, figure {
+  display: block;
+}
+
+/* Clearing floats without extra markup  */
+/* line 22, scss/imports/_reset.scss */
+.wrapper {
+  display: inline-block;
+}
+
+/* line 23, scss/imports/_reset.scss */
+.wrapper:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/* line 24, scss/imports/_reset.scss */
+* html .wrapper {
+  height: 1%;
+}
+
+/* line 25, scss/imports/_reset.scss */
+.wrapper {
+  display: block;
+}
+
+/* Typography */
+/* line 26, scss/ie.scss */
+body {
+  font-family: "Asap", "HelveticaNeue", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 1.428571429;
+  color: #333333;
+  background-color: #000;
+}
+
+/* line 34, scss/ie.scss */
+h1 {
+  font-size: 4.4em;
+  line-height: 1.1em;
+  color: white;
+}
+
+/* line 38, scss/ie.scss */
+h2 {
+  font-size: 2.3em;
+}
+
+/* line 41, scss/ie.scss */
+h3 {
+  font-size: 1.5em;
+  font-weight: normal;
+  color: #4d1521;
+}
+
+/* line 47, scss/ie.scss */
+hr {
+  background-image: url(../img/background/hr.png);
+  background-repeat: repeat;
+  height: 4px;
+  border: none;
+  margin: 1.1em 0;
+}
+
+/* line 55, scss/ie.scss */
+ul li {
+  list-style: none;
+  /* if you’re not already using a reset */
+  margin-left: 0.9em;
+}
+
+/* line 59, scss/ie.scss */
+ul.list li:before {
+  color: #fff;
+  /* set color to red */
+  margin-left: -0.7em;
+  content: "\2022";
+  /* /2022 is the numerical unicode for &bull; */
+  font-size: 1.5em;
+  /* set the font-size of the bullet if necessary. Make sure to use em or %*/
+  padding-right: .25em;
+  /* give the bullet some padding from the text Make sure to use em*/
+  position: relative;
+  top: .1em;
+  /* set the vertical position of the bullet if necessary. Make sure to use em or % */
+}
+
+/* line 70, scss/ie.scss */
+.slide {
+  position: relative;
+  overflow: hidden;
+}
+/* line 74, scss/ie.scss */
+.slide.A {
+  background: url(../img/background/a.gif) repeat;
+}
+/* line 77, scss/ie.scss */
+.slide.B {
+  background: url(../img/background/b.gif) repeat;
+}
+/* line 80, scss/ie.scss */
+.slide.C {
+  background: url(../img/background/c.gif) repeat;
+}
+/* line 83, scss/ie.scss */
+.slide.D {
+  background: url(../img/background/d.gif) repeat;
+}
+/* line 86, scss/ie.scss */
+.slide .content {
+  position: relative;
+  padding: 10em 14% 0;
+  top: 8%;
+}
+/* line 90, scss/ie.scss */
+.slide .content.fixed {
+  position: relative;
+}
+/* line 93, scss/ie.scss */
+.slide .content.static {
+  position: relative;
+  text-align: center;
+  padding-bottom: 10em;
+}
+/* line 99, scss/ie.scss */
+.slide.is-wide .content {
+  top: 1%;
+  padding-bottom: 10em;
+}
+/* line 103, scss/ie.scss */
+.slide .sideBar {
+  display: none;
+}
+/* line 106, scss/ie.scss */
+.slide .centerBar {
+  display: none;
+}
+/* line 109, scss/ie.scss */
+.slide .next {
+  display: none;
+}
+
+/* line 115, scss/ie.scss */
+#nav {
+  display: none;
+}
+
+/* line 118, scss/ie.scss */
+#content {
+  position: absolute;
+}
+
+/* line 119, scss/ie.scss */
+.logo {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+}
+
+/* line 120, scss/ie.scss */
+.quaternary {
+  color: #2e1d45;
+}
+
+/* line 121, scss/ie.scss */
+.smallScreen {
+  text-align: center;
+}
+/* line 123, scss/ie.scss */
+.smallScreen img {
+  width: 72%;
+}
+
+/* line 128, scss/ie.scss */
+ul {
+  font-size: 1.5em;
+}
+
+/* line 129, scss/ie.scss */
+p {
+  font-size: 1.5em;
+}
+
+/* 992 =================================================== */
+/* line 153, scss/ie.scss */
+.slide {
+  width: 100%;
+  height: 100%;
+}
+/* line 156, scss/ie.scss */
+.slide .content {
+  width: 100%;
+  height: 100%;
+  top: 20%;
+}
+/* line 159, scss/ie.scss */
+.slide .content.fixed {
+  position: fixed;
+}
+/* line 162, scss/ie.scss */
+.slide .content.static {
+  position: fixed;
+}
+/* line 166, scss/ie.scss */
+.slide .content {
+  padding: 0 14%;
+}
+/* line 169, scss/ie.scss */
+.slide.is-center {
+  text-align: center;
+}
+/* line 171, scss/ie.scss */
+.slide.is-center hr {
+  width: 10em;
+  margin: 1em auto;
+  width: 46em;
+}
+/* line 177, scss/ie.scss */
+.slide.is-wide .content {
+  top: 8%;
+}
+/* line 180, scss/ie.scss */
+.slide .content.map {
+  top: 1%;
+}
+/* line 183, scss/ie.scss */
+.slide .sideBar {
+  height: 100%;
+  padding-top: 1em;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  background-attachment: fixed;
+  background-position: 90% center;
+  background-repeat: no-repeat;
+  display: block;
+}
+/* line 195, scss/ie.scss */
+.slide .centerBar {
+  display: inline;
+  width: 100%;
+}
+/* line 199, scss/ie.scss */
+.slide .next {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+/* line 206, scss/ie.scss */
+.slide .next span {
+  display: inline-block;
+  padding: 1em;
+  color: white;
+  font-size: 1.2em;
+  font-style: italic;
+  position: relative;
+  top: 0.2em;
+}
+/* line 215, scss/ie.scss */
+.slide .next .box {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  position: relative;
+  cursor: pointer;
+}
+/* line 222, scss/ie.scss */
+.slide .next button {
+  border: none;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 5px 5px 0 0;
+  opacity: 0.1;
+  cursor: pointer;
+}
+/* line 230, scss/ie.scss */
+.slide .next .caret {
+  background-image: url("../img/background/downCaret.png");
+  bottom: 18px;
+  height: 19px;
+  left: 13px;
+  margin: 0 auto;
+  position: absolute;
+  width: 36px;
+}
+
+/* line 244, scss/ie.scss */
+#mapKey {
+  left: 4%;
+}
+
+/* line 248, scss/ie.scss */
+#nav {
+  display: none;
+}
+
+/* line 252, scss/ie.scss */
+#mainContent, #content {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 254, scss/ie.scss */
+.column {
+  width: 40%;
+  width: 520px;
+}
+
+/* line 255, scss/ie.scss */
+.smallScreen {
+  display: none;
+}
+
+/* line 259, scss/ie.scss */
+#slideBox {
+  width: 730px;
+}
+
+/* line 263, scss/ie.scss */
+#slideNavigation .nextCaret,
+#slideNavigation .previousCaret {
+  display: inline;
+}
+
+/* line 267, scss/ie.scss */
+#mapKey {
+  position: absolute;
+  left: 4%;
+  top: 23%;
+}
+
+/* line 274, scss/ie.scss */
+.slide .content.map {
+  padding: 1%;
+}
+
+/* line 278, scss/ie.scss */
+.slidesjs-pagination li:before {
+  margin: 0 32%;
+}
